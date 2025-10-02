@@ -38,23 +38,14 @@ h3 {
 }
 
 p {
-  /* font-size: clamp(1rem, 2.5vw, 1.25rem); */
-  /* font-weight: 430;  */
+  font-size: clamp(1rem, 2.5vw, 1.25rem); 
+  font-weight: 430; 
 }
 
 
 /* LAYOUT */
-
 .container {
-  border: 2px solid red;
   max-width: 64rem;
   margin: 0 auto;
   padding: 1rem;
-}
-
-@media (max-width: 768px){
-  .container{
-    width: 100%;
-    padding: 1rem;
-  }
 }

@@ -1,6 +1,8 @@
 #cards{
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .card {
@@ -10,7 +12,6 @@
   border: 1px solid var(--gray);
   border-radius: 16px;
   padding: 1rem;
-  width: 90%;
 }
 
 .card img {
@@ -28,7 +29,10 @@
   border-radius: 8px;
   border: 1px solid var(--gray);
   background-color: transparent;
-  transition: 0.3s ease;
+  transition: .2s ease-in-out;
+  font-weight: 600;
+  font-family: 'Poppins';
+  text-transform: uppercase;
 
   &:hover {
     background-color: #e5e7eb;
@@ -36,11 +40,24 @@
   }
 }
 
-/* MEDIA QUERIE FOR THE CARD BE SMALL IN THE DESKTOP VERSION */
-@media (min-width: 800px) {
+/* MEDIA QUERIE FOR THE CARD IN THE DESKTOP VERSION */
+@media (min-width: 768px) {
+  #cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 24px;
+  }
+
+
   .card {
-    width: 280px;
+    width: 280px; 
     height: 220px;
+    
+  }
+
+  #header h1{
+    padding-top: 3rem;
   }
 
   #header p {

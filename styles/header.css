@@ -4,12 +4,9 @@
   align-items: center;
 }
 
-
-
 #header p {
   color: var(--gray);
   font-weight: 300;
   font-size: 0.875rem;
   margin-bottom: 1rem;
 }
-
