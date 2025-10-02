@@ -1,0 +1,60 @@
+:root{
+  /* COLORS */
+  --background-color: linear-gradient(to right, #eef2ff, #ffffff, #f5f3ff);
+  --history: #3B82F6;
+  --science: #22C55E;
+  --geography: #F97316;
+  --math: #A855F7;
+  --portuguese: #EC4899;
+  --english: #6366F1;
+  --right-answer-bg: #d9f99d;
+  --wrong-answer-bg: #fee2e2;
+  --gray: #9CA3AF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background-color);
+  height: 200px;
+  width: 100%;
+
+  /* FONTS */
+  font-family: 'Poppins';
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.50rem);
+  font-weight: 400;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
+  font-weight: 400;
+}
+
+p {
+  /* font-size: clamp(1rem, 2.5vw, 1.25rem); */
+  /* font-weight: 430;  */
+}
+
+
+/* LAYOUT */
+
+.container {
+  border: 2px solid red;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@media (max-width: 768px){
+  .container{
+    width: 100%;
+    padding: 1rem;
+  }
+}
