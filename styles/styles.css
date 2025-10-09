@@ -1,3 +1,5 @@
 @import url(global.css);
-@import url(header.css);
-@import url(cards.css);
+@import url(./index-styles/header.css);
+@import url(./index-styles/cards.css);
+@import url(./quiz-styles/header-quiz.css);
+@import url(./quiz-styles/card-quiz.css);
