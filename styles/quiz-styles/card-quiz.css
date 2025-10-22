@@ -6,6 +6,7 @@
   background-color: #FAFAFA;
 }
 
+
 .card-quiz h3 {
   font-size: 1.4rem;
   padding-bottom: 2rem;
@@ -20,31 +21,31 @@
 .option {
   width: 100%;
   height: 3rem;
-
+  
   border: 1px solid var(--gray);
   background-color: #FAFAFA;
   border-radius: 5px;
   outline: none;
-
+  
   display: flex;
   padding-left: 1.5rem;
   gap: 0.875rem;
   align-items: center;
-
+  
   font-family: "Poppins";
-
+  
 }
 
 .option-letter {
   border-radius: 15px;
   height: 30px;
   width: 30px;
-
+  
   display: flex;
   align-items: center;
   justify-content: center;
   align-self: center;
-
+  
   background-color: var(--gray);
   font-weight: 700;
   font-size: 1rem;
@@ -71,7 +72,38 @@
   text-decoration: none;
   color: black;
   font-weight: 500;
-
+  
   display: flex;
   justify-content: center;
+}
+
+
+/* CREATING DESKTOP VERSION */
+@media(width > 768px){
+  .card-quiz {
+    padding-inline: 2rem;
+  }
+
+  .options-container {
+    gap: 20px;
+  }
+
+  .option{
+    margin: 0 auto;
+    width: 550px;
+    height: 60px;
+  }
+
+  .botton-buttons{
+    max-width: 550px;
+    margin: 2rem auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .botton-button{
+    margin: 0 auto;
+    align-items: center;
+    height: 40px;
+  }
 }

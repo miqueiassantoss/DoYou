@@ -37,3 +37,14 @@
   background-color: black;
 
 }
+
+
+@media (width > 768px) {
+  .quiz-container {
+    margin: 0 auto;
+    max-width: 768px;
+    padding-bottom: 5rem;
+  }
+  
+
+}
