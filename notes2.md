@@ -35,6 +35,9 @@ E assim por diante.
 
 Quando a página quiz.html carregar, seu JavaScript poderá "ler" a URL, pegar o valor do parâmetro subject e saber exatamente qual conjunto de perguntas carregar do seu "banco de dados" criado no passo 1.
 
+
+
+<!-- PARAMOS AQUI -->
 3. A Mágica: Populando o Quiz Dinamicamente
 
 O Processo: Quando a página quiz.html for carregada, um script quiz.js deve rodar.
@@ -56,6 +59,9 @@ Selecionar o elemento H3 da pergunta (ex: document.querySelector('.question-card
 Selecionar o contador de "Questão 1 de 3" e atualizá-lo.
 
 Fazer um loop pelos botões de opção. Para cada botão, você vai pegar o texto da opção correspondente no seu objeto de pergunta e atualizar o <span> dentro do botão.
+
+
+
 
 4. A Interação: Respondendo e Avançando
 
