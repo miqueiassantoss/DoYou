@@ -5,40 +5,46 @@ import { mathQuestions } from "./utils.js"
 import { sportsQuestions } from "./utils.js"
 import { englishQuestions } from "./utils.js"
 
-//Aqui estamos pegando a matéria. Cogite colocar isso dentro de uma função depois.
-const queryString = window.location.search
-const urlParams = new URLSearchParams(queryString)
-const theme = urlParams.get("tema")
+//PEGANDO ELEMENTOS DO DOM
+const titleQuestion = document.querySelector(".question-card")
+const answersOptions = document.querySelectorAll(".option-text")
+const startButtons = document.querySelectorAll(".start-game")
+
+
 
 let selectedQuestions = null
 
-if (theme === "ciencia") {
-  selectedQuestions = scienceQuestions
-  console.log("Vamos começar o quiz de Ciência")
-  console.log(selectedQuestions)
+function startQuiz() {
+  const queryString = window.location.search
+  const urlParams = new URLSearchParams(queryString)
+  const theme = urlParams.get("tema")
 
-} else if (theme === "historia") {
-  selectedQuestions = historyQuestions
-  console.log("Vamos estudar História")
-  console.log(selectedQuestions)
+  if (theme === "ciencia") {
+    selectedQuestions = scienceQuestions
+    console.log("Vamos começar o quiz de Ciência")
+  } else if (theme === "historia") {
+    selectedQuestions = historyQuestions
+    console.log("Vamos estudar História")
+  } else if (theme === "geografia") {
+    selectedQuestions = geographyQuestions
+    console.log("Vamos estudar geografia")
+  } else if (theme === "matematica") {
+    selectedQuestions = mathQuestions
+    console.log("Vamos estudar Matemática")
+  } else if (theme === "esportes") {
+    selectedQuestions = sportsQuestions
+    console.log("Vamos estudar esportes")
+  } else if (theme === "ingles") {
+    console.log("Vamos estudar inglês")
+    selectedQuestions = englishQuestions
+  }
 
-} else if (theme === "geografia") {
-  selectedQuestions = geographyQuestions
-  console.log("Vamos estudar geografia")
-  console.log(selectedQuestions)
-
-} else if (theme === "matematica") {
-  selectedQuestions = mathQuestions
-  console.log("Vamos estudar Matemática")
-  console.log(selectedQuestions)
-
-} else if (theme === "esportes") {
-  selectedQuestions = sportsQuestions
-  console.log("Vamos estudar esportes")
-  console.log(selectedQuestions)
-  
-} else if (theme === "ingles") {
-  console.log("Vamos estudar inglês")
-  selectedQuestions = englishQuestions
-  console.log(selectedQuestions)
+  loadQuestion()
 }
+
+function loadQuestion() {
+  console.log("A função loadQuestion foi chamada")
+  console.log("As perguntas a serem usadas são:", selectedQuestions)
+}
+
+startQuiz()
