@@ -18,6 +18,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   background: var(--background-color);
   height: 200px;
