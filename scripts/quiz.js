@@ -8,7 +8,7 @@ import { englishQuestions } from "./utils.js"
 //PEGANDO ELEMENTOS DO DOM
 const titleQuestion = document.querySelector(".title-question")
 const answersOptions = document.querySelectorAll(".option")
-const startButtons = document.querySelectorAll(".start-game")
+// const startButtons = document.querySelectorAll(".start-game")
 
 function startQuiz() {
   const queryString = window.location.search
@@ -33,9 +33,10 @@ function startQuiz() {
 }
 
 let selectedQuestions = null
+let currentQuestion = 0
 
 function loadQuestion() {
-  const question = selectedQuestions[0]
+  const question = selectedQuestions[currentQuestion]
   titleQuestion.textContent = question.question
 
   // Renderizando as questões
@@ -46,4 +47,18 @@ function loadQuestion() {
   })
 }
 
+
+//CHECANDO SE A PERGUNTA ESTÁ CERTA OU ERRADA.
+answersOptions.forEach((option) => {
+  option.addEventListener("click", () => {
+    if (option.dataset.correct === "true") {
+      option.classList.add("option-correct")
+    } else {
+      option.classList.add("option-incorrect")
+    }
+  })
+})
+
+
+// PRÓXIMOS
 startQuiz()
