@@ -50,3 +50,13 @@ p {
   margin: 0 auto;
   padding: 1rem;
 }
+
+
+
+
+
+.option:disabled {
+  cursor: not-allowed;
+  color: black;
+  font-weight: 700;
+}

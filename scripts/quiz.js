@@ -47,18 +47,20 @@ function loadQuestion() {
   })
 }
 
-
 //CHECANDO SE A PERGUNTA ESTÁ CERTA OU ERRADA.
 answersOptions.forEach((option) => {
   option.addEventListener("click", () => {
-    if (option.dataset.correct === "true") {
-      option.classList.add("option-correct")
-    } else {
-      option.classList.add("option-incorrect")
-    }
+    answersOptions.forEach((option) => {
+      if (option.dataset.correct === "true") {
+        option.classList.add("option-correct")
+        option.disabled = true
+      } else if (option.dataset.correct === "false") {
+        option.classList.add("option-incorrect")
+        option.disabled = true
+      }
+    })
   })
 })
-
 
 // PRÓXIMOS
 startQuiz()
