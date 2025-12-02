@@ -135,10 +135,10 @@ export const geographyQuestions = [
   {
     question: "Qual é o país mais populoso do mundo?",
     answers: [
-      { text: "Índia", correct: false },
+      { text: "Índia", correct: true },
       { text: "Estados Unidos", correct: false },
       { text: "Indonésia", correct: false },
-      { text: "China", correct: true },
+      { text: "China", correct: false },
     ],
   },
   {

@@ -1,6 +1,7 @@
 :root{
   /* COLORS */
   --background-color: #F3F6FB;
+  --background-color-body: linear-gradient(62deg, #cae5ff 0%, #f3e6ff 100%);
   --history: #3B82F6;
   --science: #22C55E;
   --geography: #F97316;
@@ -20,7 +21,7 @@
 
 
 body {
-  background: var(--background-color);
+  background: var(--background-color-body);
   height: 200px;
   width: 100%;
 
