@@ -9,7 +9,9 @@ import { englishQuestions } from "./utils.js"
 const titleQuestion = document.querySelector(".title-question")
 const answersOptions = document.querySelectorAll(".option")
 const nextQuestion = document.getElementById("next-question")
+
 const bar = document.getElementById("progress-bar-fill")
+const progressText = document.querySelector("header span")
 // const startButtons = document.querySelectorAll(".start-game")
 
 function startQuiz() {
@@ -42,6 +44,8 @@ function loadQuestion() {
   const question = selectedQuestions[currentQuestion]
   titleQuestion.textContent = question.question
 
+  progressText.textContent = `Questão ${currentQuestion + 1} de ${selectedQuestions.length}`
+
   // Renderizando as questões
   answersOptions.forEach((option, index) => {
     const span = option.querySelector(".option-text")
@@ -50,7 +54,6 @@ function loadQuestion() {
   })
 
   let percentage = ((currentQuestion + 1) / selectedQuestions.length) * 100
-  console.log(percentage)
 
   bar.style.width = `${percentage}%`
 }
