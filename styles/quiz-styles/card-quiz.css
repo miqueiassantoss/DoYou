@@ -88,6 +88,10 @@
   background-color: transparent;
 }
 
+.bottom-button:disabled{
+  cursor: not-allowed;
+}
+
 
 
 /* CRIANDO ESTILOS DE RESPOSTAS */

@@ -52,6 +52,9 @@ function loadQuestion() {
 //CHECANDO SE A PERGUNTA ESTÁ CERTA OU ERRADA.
 answersOptions.forEach((option) => {
   option.addEventListener("click", () => {
+
+  nextQuestion.disabled = false
+
     answersOptions.forEach((option) => {
       if (option.dataset.correct === "true") {
         option.classList.add("option-correct")
@@ -67,22 +70,25 @@ answersOptions.forEach((option) => {
 
 nextQuestion.addEventListener("click", () => {
 
+  
   answersOptions.forEach((option) => {
     option.classList.remove("option-correct")
     option.classList.remove("option-incorrect")
     option.disabled = false
   })
-
-
+  
+  
   currentQuestion = currentQuestion + 1
-
+  
   if(currentQuestion < selectedQuestions.length ){
     loadQuestion()
-
+    
   } else {
     alert("Fim do jogo")
     window.location.href = "./index.html"
   }
+  
+  nextQuestion.disabled = true
 })
 
 // PRÓXIMOS
