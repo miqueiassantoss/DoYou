@@ -8,6 +8,7 @@ import { englishQuestions } from "./utils.js"
 //PEGANDO ELEMENTOS DO DOM
 const titleQuestion = document.querySelector(".title-question")
 const answersOptions = document.querySelectorAll(".option")
+const nextQuestion = document.getElementById("next-question")
 // const startButtons = document.querySelectorAll(".start-game")
 
 function startQuiz() {
@@ -60,6 +61,19 @@ answersOptions.forEach((option) => {
       }
     })
   })
+})
+
+nextQuestion.addEventListener("click", () => {
+
+  answersOptions.forEach((option) => {
+    option.classList.remove("option-correct")
+    option.classList.remove("option-incorrect")
+    option.disabled = false
+  })
+
+
+  currentQuestion = currentQuestion + 1
+  loadQuestion()
 })
 
 // PRÓXIMOS
