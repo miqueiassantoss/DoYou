@@ -19,12 +19,39 @@ export const scienceQuestions = [
     ],
   },
   {
-    question: "Qual dessas é uma fonte de energia renovável",
+    question: "Qual dessas é uma fonte de energia renovável?",
     answers: [
       { text: "Carvão", correct: false },
       { text: "Petróleo", correct: false },
       { text: "Energia Solar", correct: true },
       { text: "Gás Natural", correct: false },
+    ],
+  },
+  {
+    question: "Qual é o símbolo químico da água?",
+    answers: [
+      { text: "HO2", correct: false },
+      { text: "H2O", correct: true },
+      { text: "O2H", correct: false },
+      { text: "H2O2", correct: false },
+    ],
+  },
+  {
+    question: "Qual órgão do corpo humano é responsável por bombear sangue?",
+    answers: [
+      { text: "Pulmão", correct: false },
+      { text: "Cérebro", correct: false },
+      { text: "Coração", correct: true },
+      { text: "Fígado", correct: false },
+    ],
+  },
+  {
+    question: "Qual é a unidade básica da vida?",
+    answers: [
+      { text: "Átomo", correct: false },
+      { text: "Molécula", correct: false },
+      { text: "Célula", correct: true },
+      { text: "Tecido", correct: false },
     ],
   },
 ]
@@ -57,6 +84,33 @@ export const historyQuestions = [
       { text: "Maias", correct: false },
     ],
   },
+  {
+    question: "Quem descobriu o Brasil?",
+    answers: [
+      { text: "Cristóvão Colombo", correct: false },
+      { text: "Pedro Álvares Cabral", correct: true },
+      { text: "Vasco da Gama", correct: false },
+      { text: "Fernão de Magalhães", correct: false },
+    ],
+  },
+  {
+    question: "Em que ano o homem pisou na Lua pela primeira vez?",
+    answers: [
+      { text: "1959", correct: false },
+      { text: "1969", correct: true },
+      { text: "1979", correct: false },
+      { text: "1989", correct: false },
+    ],
+  },
+  {
+    question: "Qual país presenteou os EUA com a Estátua da Liberdade?",
+    answers: [
+      { text: "França", correct: true },
+      { text: "Inglaterra", correct: false },
+      { text: "Espanha", correct: false },
+      { text: "Alemanha", correct: false },
+    ],
+  },
 ]
 
 export const geographyQuestions = [
@@ -85,6 +139,33 @@ export const geographyQuestions = [
       { text: "Estados Unidos", correct: false },
       { text: "Indonésia", correct: false },
       { text: "China", correct: true },
+    ],
+  },
+  {
+    question: "Qual é o maior país do mundo em área territorial?",
+    answers: [
+      { text: "Canadá", correct: false },
+      { text: "China", correct: false },
+      { text: "Rússia", correct: true },
+      { text: "Estados Unidos", correct: false },
+    ],
+  },
+  {
+    question: "Qual é a capital da Austrália?",
+    answers: [
+      { text: "Sydney", correct: false },
+      { text: "Melbourne", correct: false },
+      { text: "Canberra", correct: true },
+      { text: "Brisbane", correct: false },
+    ],
+  },
+  {
+    question: "Em qual continente fica o deserto do Saara?",
+    answers: [
+      { text: "Ásia", correct: false },
+      { text: "África", correct: true },
+      { text: "América do Sul", correct: false },
+      { text: "Austrália", correct: false },
     ],
   },
 ]
@@ -118,6 +199,33 @@ export const mathQuestions = [
       { text: "120 graus", correct: false },
     ],
   },
+  {
+    question: "Quanto é 25% de 200?",
+    answers: [
+      { text: "25", correct: false },
+      { text: "50", correct: true },
+      { text: "75", correct: false },
+      { text: "100", correct: false },
+    ],
+  },
+  {
+    question: "Qual é o próximo número na sequência: 2, 4, 8, 16...?",
+    answers: [
+      { text: "20", correct: false },
+      { text: "24", correct: false },
+      { text: "32", correct: true },
+      { text: "30", correct: false },
+    ],
+  },
+  {
+    question: "Qual é o valor de Pi (aproximado)?",
+    answers: [
+      { text: "3.12", correct: false },
+      { text: "3.16", correct: false },
+      { text: "3.14", correct: true },
+      { text: "3.18", correct: false },
+    ],
+  },
 ]
 
 export const sportsQuestions = [
@@ -148,6 +256,33 @@ export const sportsQuestions = [
       { text: "11", correct: false },
     ],
   },
+  {
+    question: "Em que esporte se usa uma raquete e uma peteca?",
+    answers: [
+      { text: "Tênis", correct: false },
+      { text: "Squash", correct: false },
+      { text: "Badminton", correct: true },
+      { text: "Ping-pong", correct: false },
+    ],
+  },
+  {
+    question: "Qual país é famoso pelo sumô?",
+    answers: [
+      { text: "China", correct: false },
+      { text: "Coreia do Sul", correct: false },
+      { text: "Japão", correct: true },
+      { text: "Tailândia", correct: false },
+    ],
+  },
+  {
+    question: "Quantos tempos tem uma partida de futebol?",
+    answers: [
+      { text: "1", correct: false },
+      { text: "2", correct: true },
+      { text: "3", correct: false },
+      { text: "4", correct: false },
+    ],
+  },
 ]
 
 export const englishQuestions = [
@@ -176,6 +311,33 @@ export const englishQuestions = [
       { text: "childes", correct: false },
       { text: "children", correct: true },
       { text: "childer", correct: false },
+    ],
+  },
+  {
+    question: "Which color is 'Red'?",
+    answers: [
+      { text: "Azul", correct: false },
+      { text: "Amarelo", correct: false },
+      { text: "Vermelho", correct: true },
+      { text: "Verde", correct: false },
+    ],
+  },
+  {
+    question: "How do you say 'Obrigado' in English?",
+    answers: [
+      { text: "Please", correct: false },
+      { text: "Sorry", correct: false },
+      { text: "Thank you", correct: true },
+      { text: "Welcome", correct: false },
+    ],
+  },
+  {
+    question: "Choose the correct sentence:",
+    answers: [
+      { text: "She don't like pizza.", correct: false },
+      { text: "She doesn't like pizza.", correct: true },
+      { text: "She no like pizza.", correct: false },
+      { text: "She not like pizza.", correct: false },
     ],
   },
 ]
