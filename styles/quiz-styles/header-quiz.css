@@ -30,12 +30,11 @@
   background-color: var(--gray);
 }
 
-.progress-bar-fill {
-  width: 33%;
+#progress-bar-fill {
+  width: 16.66%;
   height: 8px;
   border-radius: 8px;
   background-color: black;
-
 }
 
 

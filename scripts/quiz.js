@@ -9,6 +9,7 @@ import { englishQuestions } from "./utils.js"
 const titleQuestion = document.querySelector(".title-question")
 const answersOptions = document.querySelectorAll(".option")
 const nextQuestion = document.getElementById("next-question")
+const bar = document.getElementById("progress-bar-fill")
 // const startButtons = document.querySelectorAll(".start-game")
 
 function startQuiz() {
@@ -35,12 +36,11 @@ function startQuiz() {
 
 let selectedQuestions = null
 let currentQuestion = 0
-let score = 0 
+let score = 0
 
 function loadQuestion() {
   const question = selectedQuestions[currentQuestion]
   titleQuestion.textContent = question.question
-
 
   // Renderizando as questões
   answersOptions.forEach((option, index) => {
@@ -48,19 +48,21 @@ function loadQuestion() {
     span.textContent = question.answers[index].text
     option.dataset.correct = question.answers[index].correct
   })
+
+  let percentage = ((currentQuestion + 1) / selectedQuestions.length) * 100
+  console.log(percentage)
+
+  bar.style.width = `${percentage}%`
 }
 
 //CHECANDO SE A PERGUNTA ESTÁ CERTA OU ERRADA.
 
-
-
 answersOptions.forEach((option) => {
   option.addEventListener("click", () => {
+    nextQuestion.disabled = false
 
-  nextQuestion.disabled = false
-
-    if(option.dataset.correct === 'true'){
-      score ++
+    if (option.dataset.correct === "true") {
+      score++
     }
 
     answersOptions.forEach((opt) => {
@@ -75,30 +77,24 @@ answersOptions.forEach((option) => {
   })
 })
 
-
 nextQuestion.addEventListener("click", () => {
-
-  
   answersOptions.forEach((option) => {
     option.classList.remove("option-correct")
     option.classList.remove("option-incorrect")
     option.disabled = false
   })
-  
-  
+
   currentQuestion = currentQuestion + 1
-  
-  if(currentQuestion < selectedQuestions.length ){
+
+  if (currentQuestion < selectedQuestions.length) {
     loadQuestion()
-    
   } else {
     alert(`Fim de jogo, você acertou ${score}`)
     window.location.href = "./index.html"
   }
-  
+
   nextQuestion.disabled = true
 })
 
 // PRÓXIMOS
 startQuiz()
-
