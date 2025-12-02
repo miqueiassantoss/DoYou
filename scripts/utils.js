@@ -1,11 +1,3 @@
-/*RESUMINDO A ESTRUTURA
-- Variável chamada scienceQuestions que guarda um Array
-- Dentro desse Array, cada item é um objeto. Cada objeto representa uma pergunta completa.
-- Dentro de cada objeto-pergunta, tem duas chaves (propriedades)
-  - A propriedade question que guarda um texto
-  - A propriedade "answers" que guarda  um outro array.
-    - E dentro desse Array de respostas, cada item é umObjeto com as propriedades "text" e "correct"*/
-
 export const scienceQuestions = [
   {
     question: "Qual é o planeta mais próximo do sol?",

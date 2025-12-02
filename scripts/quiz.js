@@ -40,6 +40,7 @@ function loadQuestion() {
   const question = selectedQuestions[currentQuestion]
   titleQuestion.textContent = question.question
 
+
   // Renderizando as questões
   answersOptions.forEach((option, index) => {
     const span = option.querySelector(".option-text")
@@ -63,6 +64,7 @@ answersOptions.forEach((option) => {
   })
 })
 
+
 nextQuestion.addEventListener("click", () => {
 
   answersOptions.forEach((option) => {
@@ -73,8 +75,16 @@ nextQuestion.addEventListener("click", () => {
 
 
   currentQuestion = currentQuestion + 1
-  loadQuestion()
+
+  if(currentQuestion < selectedQuestions.length ){
+    loadQuestion()
+
+  } else {
+    alert("Fim do jogo")
+    window.location.href = "./index.html"
+  }
 })
 
 // PRÓXIMOS
 startQuiz()
+
