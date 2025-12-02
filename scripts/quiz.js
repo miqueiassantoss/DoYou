@@ -35,6 +35,7 @@ function startQuiz() {
 
 let selectedQuestions = null
 let currentQuestion = 0
+let score = 0 
 
 function loadQuestion() {
   const question = selectedQuestions[currentQuestion]
@@ -50,18 +51,25 @@ function loadQuestion() {
 }
 
 //CHECANDO SE A PERGUNTA ESTÁ CERTA OU ERRADA.
+
+
+
 answersOptions.forEach((option) => {
   option.addEventListener("click", () => {
 
   nextQuestion.disabled = false
 
-    answersOptions.forEach((option) => {
-      if (option.dataset.correct === "true") {
-        option.classList.add("option-correct")
-        option.disabled = true
-      } else if (option.dataset.correct === "false") {
-        option.classList.add("option-incorrect")
-        option.disabled = true
+    if(option.dataset.correct === 'true'){
+      score ++
+    }
+
+    answersOptions.forEach((opt) => {
+      if (opt.dataset.correct === "true") {
+        opt.classList.add("option-correct")
+        opt.disabled = true
+      } else if (opt.dataset.correct === "false") {
+        opt.classList.add("option-incorrect")
+        opt.disabled = true
       }
     })
   })
@@ -84,7 +92,7 @@ nextQuestion.addEventListener("click", () => {
     loadQuestion()
     
   } else {
-    alert("Fim do jogo")
+    alert(`Fim de jogo, você acertou ${score}`)
     window.location.href = "./index.html"
   }
   
