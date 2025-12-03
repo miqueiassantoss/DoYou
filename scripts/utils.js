@@ -230,60 +230,64 @@ export const mathQuestions = [
 
 export const sportsQuestions = [
   {
-    question: "Qual o maior clube de futebol do Brasil?",
+    question:
+      "Qual país é o maior vencedor de Copas do Mundo de Futebol masculino?",
     answers: [
-      { text: "Sampaio Correa", correct: false },
-      { text: "Paysandu", correct: false },
-      { text: "São Paulo", correct: true },
-      { text: "RedBull Bragantino", correct: false },
+      { text: "Alemanha", correct: false },
+      { text: "Itália", correct: false },
+      { text: "Brasil", correct: true },
+      { text: "Argentina", correct: false },
     ],
   },
   {
-    question: "Qual time da capital Paulista tem mais rebaixamentos?",
+    question: "Quem venceu a Copa do Mundo de 2022?",
     answers: [
-      { text: "São Paulo", correct: false },
-      { text: "Corinthians", correct: false },
-      { text: "Palmeiras", correct: true },
-      { text: "Santos", correct: false },
+      { text: "França", correct: false },
+      { text: "Argentina", correct: true },
+      { text: "Croácia", correct: false },
+      { text: "Marrocos", correct: false },
     ],
   },
   {
-    question: "Quem é o maior campeão mundial do Brasil?",
+    question:
+      "Qual clube espanhol possui o maior número de títulos da Liga dos Campeões da UEFA?",
     answers: [
-      { text: "São Paulo", correct: true },
-      { text: "Palmeiras", correct: false },
-      { text: "Flamengo", correct: false },
-      { text: "Remo", correct: false },
+      { text: "Barcelona", correct: false },
+      { text: "Atlético de Madrid", correct: false },
+      { text: "Real Madrid", correct: true },
+      { text: "Sevilla", correct: false },
     ],
   },
   {
-    question: "Quem tem a torcida mais modinha do Brasil?",
+    question:
+      "Quantos minutos dura o tempo regulamentar de uma partida de futebol?",
     answers: [
-      { text: "Palmeiras", correct: true },
-      { text: "Vasco", correct: false },
-      { text: "Atletico-MG", correct: false },
-      { text: "Fluminense", correct: false },
+      { text: "45 minutos", correct: false },
+      { text: "60 minutos", correct: false },
+      { text: "90 minutos", correct: true },
+      { text: "100 minutos", correct: false },
     ],
   },
   {
-    question: "Qual time não é tri-rebaixado graças a um rival?",
+    question: "Qual jogador é conhecido mundialmente como o 'Rei do Futebol'?",
     answers: [
-      { text: "Palmeiras", correct: true },
-      { text: "Corinthians", correct: false },
-      { text: "Vasco", correct: false },
-      { text: "Grêmio", correct: false },
+      { text: "Maradona", correct: false },
+      { text: "Pelé", correct: true },
+      { text: "Messi", correct: false },
+      { text: "Cristiano Ronaldo", correct: false },
     ],
   },
   {
-    question: "Qual time é bi-rebaixado e não tem mundial?",
+    question: "Em que ano foi realizada a primeira Copa do Mundo de Futebol?",
     answers: [
-      { text: "Lazio da Barrafunda", correct: true },
-      { text: "Super Verde", correct: true },
-      { text: "Porks", correct: true },
-      { text: "Crefisa FC", correct: true },
+      { text: "1930", correct: true },
+      { text: "1950", correct: false },
+      { text: "1924", correct: false },
+      { text: "1942", correct: false },
     ],
   },
 ]
+
 
 export const englishQuestions = [
   {
